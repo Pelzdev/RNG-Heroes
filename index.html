@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF/-8"/>
+  <link rel="stylesheet" type"text/css" href="styles/style.css">
+  <script src="js/lib/phaser.js"></script>
+  <script src="js/globals.js"></script>
+  <script src="js/states/Boot.js"></script>
+  <script src="js/states/Preloader.js"></script>
+  <script src="js/states/MainMenu.js"></script>
+  <script src="js/states/HeroPicker.js"></script>
+  <script src="js/states/Event.js"></script>
+</head>
+
+<body>
+  <div id="phaser-window">
+    <script>
+      window.onload = function() {
+        let game = new Phaser.Game(
+            window.innerWidth, window.innerHeight, Phaser.AUTO, 'phaser-window'
+          )
+        game.state.add('Boot', Game.Boot)
+        game.state.add('Preloader', Game.Preloader)
+        game.state.add('MainMenu', Game.MainMenu)
+        game.state.add('HeroPicker', Game.HeroPicker)
+        game.state.add('Event', Game.Event)
+        game.state.start('Boot')
+      } 
+    </script>
+  </div>
+
+</body>
+
+</html>
+
