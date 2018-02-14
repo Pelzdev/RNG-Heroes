@@ -6,12 +6,12 @@ const bgW = 288
 
 const playerSpriteW = 24
 const playerSpriteH = 24
-const spriteScale = (winH / 6) / playerSpriteH
+const spriteScale = 2
 
 const txtStyle = {
-	header: {font: "64px Arial", fill: "#ffffff", align: "center"},
-	header2: {font: "40px Arial", fill: "#ffffff", align: "center"},
-	paragraph: {font: "32px Arial", fill: "#ffffff", align: "center"}
+	header: {font: "32px Arial", fill: "#ffffff", align: "center"},
+	header2: {font: "24px Arial", fill: "#ffffff", align: "center"},
+	paragraph: {font: "16px Arial", fill: "#ffffff", align: "center"}
 }
 
 function drawRoundedBox (context, x, y, width, height, radius, color) {
@@ -20,7 +20,7 @@ function drawRoundedBox (context, x, y, width, height, radius, color) {
 	box.drawRoundedRect(
 		x, y, width, height, radius
 	)
-	box.endFill()
+	box.endFill()	
 }
 
 function drawSprite (context, x, y, spritesheet, index) {
@@ -31,11 +31,19 @@ function drawSprite (context, x, y, spritesheet, index) {
 	return sprite
 }
 
-function addText(context, x, y, text, style, anchor) {
+function addCenteredText(context, x, y, text, style, anchor) {
 	const newText = context.game.add.text(
 		x, y, text, style
 	)
 	newText.anchor.set(0.5)
+
+	return newText
+}
+function addText(context, x, y, text, style, anchor) {
+	const newText = context.game.add.text(
+		x, y, text, style
+	)
+	newText.anchor.set(0, 0)
 
 	return newText
 }

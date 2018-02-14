@@ -6,34 +6,36 @@ Game.MainMenu.prototype = {
 		
 	},
 	create: function () {
+		const gameW = this.game.world.width
+		const gameH = this.game.world.height
+		const gameCenterX = this.game.world.centerX
+		const gameCenterY = this.game.world.centerY
 		this.stage.backgroundColor = '#111222'
 		// Make sure the bg height becomes 1/1 size of the window
 		const bgScale = (winH) / bgH
 		let bgImage = this.game.add.sprite(0, 0, 'grassBg')
 		bgImage.scale.setTo(bgScale)
 		// HEADER TEXT
-		const headerStyle = {font: "64px Arial", fill: "#ffffff", align: "center"}
-		const headerText = this.game.add.text(
-			this.game.world.centerX, this.game.world.centerY/8, 
-			"Main Menu", txtStyle.header
+		const headerText = addCenteredText(
+			this, gameCenterX, 32, "Main Menu", txtStyle.header
 		)
 		headerText.anchor.set(0.5);
-		// MENU BOX
+		// MENU BOX - White border box	and blue inner box
 		drawRoundedBox(
-			this, (winW/4)-5, (winH/8)-5, (winW/2)+10, winH-(winH/4)+10, 4, 'ffffff'
+			this, 10, 50, gameW-20, gameH-60, 4, 'ffffff'
 		)
 		drawRoundedBox(
-			this, winW/4, winH/8, winW/2, winH-(winH/4), 4, '0000ff'
+			this, 12, 52, gameW-24, gameH-64, 4, '0000ff'
 		)
 		// MENU ITEMS TEXT
-		// New game
-		const newGameText = addText(
-			this, winW/2, winH/4, "New Game", txtStyle.header2 
+		// New Game
+		const newGameText = addCenteredText(
+			this, gameW/2, 80, "New Game", txtStyle.header2 
 		)
 		newGameText.inputEnabled = true;
 		newGameText.events.onInputUp.add(startNewGame, this);
 		// Quit
-		const quitText = addText(this, winW/2, winH/1.25, "Quit", txtStyle.header2)
+		const quitText = addCenteredText(this, gameW/2, gameH-40, "Quit", txtStyle.header2)
 		quitText.anchor.set(0.5);
 
 		function startNewGame () {

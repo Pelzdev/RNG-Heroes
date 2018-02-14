@@ -18,7 +18,7 @@
     <script>
       window.onload = function() {
         let game = new Phaser.Game(
-            window.innerWidth, window.innerHeight, Phaser.AUTO, 'phaser-window'
+            400, 300, Phaser.AUTO, 'phaser-window'
           )
         game.state.add('Boot', Game.Boot)
         game.state.add('Preloader', Game.Preloader)
