@@ -26,7 +26,7 @@ function drawRoundedBox (context, x, y, width, height, radius, color) {
 function drawSprite (context, x, y, spritesheet, index) {
 	const sprite = context.game.add.sprite(x, y, spritesheet, index)
 	sprite.scale.setTo(spriteScale)
-	sprite.anchor.set(0.5, 0)
+	sprite.anchor.set(0, 0)
 
 	return sprite
 }
@@ -45,6 +45,17 @@ function addText(context, x, y, text, style) {
 		x, y, text, style
 	)
 	newText.anchor.set(0, 0)
+
+	return newText
+}
+
+function addTextLink(context, x, y, text, style) {
+	const newText = context.game.add.text(
+		x, y, text, style
+	)
+	newText.inputEnabled = true
+	newText.input.useHandCursor = true
+	newText.anchor.set(0.5)
 
 	return newText
 }
