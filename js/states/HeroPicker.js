@@ -8,7 +8,7 @@ Game.HeroPicker.prototype = {
 		const gameCenterY = this.game.world.centerY
 		// Make sure the bg height becomes 1/1 size of the window
 		const bgScale = (winH) / bgH
-		let bgImage = this.game.add.sprite(0, 0, 'grassBg')
+		const bgImage = this.game.add.sprite(0, 0, 'grassBg')
 		bgImage.scale.setTo(bgScale)
 		// MENU BOXES - White border box	and blue inner box
 		drawRoundedBox(this, 0, 0, gameW, 50, 4, 'ffffff')
@@ -19,15 +19,18 @@ Game.HeroPicker.prototype = {
 		const headerText = addCenteredText(
 			this, gameW-10, 10, "Choose a hero", txtStyle.header
 		)
+		headerText.anchor.set(1, 0)
 		// PLAYER SPRITE
 		// Place the player sprite
 		drawSprite(this, 10, 60, 'jobsSheet', 0)
-		addText(this, 64, 60, 'HeroName1', txtStyle.paragraph)
-		drawSprite(this, 10, 140, 'jobsSheet', 2)
-		addText(this, 64, 140, 'HeroName2', txtStyle.paragraph)
-		drawSprite(this, 10, 220, 'jobsSheet', 4)
-		addText(this, 64, 220, 'HeroName3', txtStyle.paragraph)
-
+		addText(this, 64, 60, 'HERONAME1', txtStyle.paragraph)
+		addText(this, 64, 80, 'level 1 Archer', txtStyle.paragraph)
+		drawSprite(this, 10, 150, 'jobsSheet', 2)
+		addText(this, 64, 150, 'HERONAME2', txtStyle.paragraph)
+		addText(this, 64, 170, 'level 1 Druid', txtStyle.paragraph)
+		drawSprite(this, 10, 240, 'jobsSheet', 4)
+		addText(this, 64, 240, 'HERONAME3', txtStyle.paragraph)
+		addText(this, 64, 260, 'level 1 Knight', txtStyle.paragraph)
 		// MENU ITEMS TEXT
 		const backText = addTextLink(this, 10, 18, "Back", txtStyle.header2)
 		backText.events.onInputUp.add(goToMainMenu, this)
