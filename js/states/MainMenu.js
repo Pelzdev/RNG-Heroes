@@ -29,14 +29,12 @@ Game.MainMenu.prototype = {
 		)
 		// MENU ITEMS TEXT
 		// New Game
-		const newGameText = addCenteredText(
+		const newGameText = addTextLink(
 			this, gameW/2, 80, "New Game", txtStyle.header2 
 		)
-		newGameText.inputEnabled = true;
-		newGameText.events.onInputUp.add(startNewGame, this);
+		newGameText.events.onInputUp.add(startNewGame, this)
 		// Quit
-		const quitText = addCenteredText(this, gameW/2, gameH-40, "Quit", txtStyle.header2)
-		quitText.anchor.set(0.5);
+		const quitText = addTextLink(this, gameW/2, gameH-30, "Quit", txtStyle.header2)
 
 		function startNewGame () {
 			this.state.start('HeroPicker')

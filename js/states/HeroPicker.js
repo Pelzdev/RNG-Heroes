@@ -39,9 +39,8 @@ Game.HeroPicker.prototype = {
 		
 
 		// MENU ITEMS TEXT
-		const backText = addCenteredText(this, winW/2, winH/1.25, "Back", txtStyle.header2)
-		backText.inputEnabled = true;
-		backText.events.onInputUp.add(goToMainMenu, this);
+		const backText = addTextLink(this, gameW/2, gameH-30, "Back", txtStyle.header2)
+		backText.events.onInputUp.add(goToMainMenu, this)
 		// FUNCTIONS
 		function goToMainMenu () {
 			this.state.start('MainMenu')

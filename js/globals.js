@@ -10,7 +10,7 @@ const spriteScale = 2
 
 const txtStyle = {
 	header: {font: "32px Arial", fill: "#ffffff", align: "center"},
-	header2: {font: "24px Arial", fill: "#ffffff", align: "center"},
+	header2: {font: "20px Arial", fill: "#ffffff", align: "center"},
 	paragraph: {font: "16px Arial", fill: "#ffffff", align: "center"}
 }
 
@@ -31,7 +31,7 @@ function drawSprite (context, x, y, spritesheet, index) {
 	return sprite
 }
 
-function addCenteredText(context, x, y, text, style, anchor) {
+function addCenteredText(context, x, y, text, style) {
 	const newText = context.game.add.text(
 		x, y, text, style
 	)
@@ -39,7 +39,8 @@ function addCenteredText(context, x, y, text, style, anchor) {
 
 	return newText
 }
-function addText(context, x, y, text, style, anchor) {
+
+function addText(context, x, y, text, style) {
 	const newText = context.game.add.text(
 		x, y, text, style
 	)
