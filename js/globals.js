@@ -35,7 +35,7 @@ function addCenteredText(context, x, y, text, style) {
 	const newText = context.game.add.text(
 		x, y, text, style
 	)
-	newText.anchor.set(0.5)
+	newText.anchor.set(0.5, 0)
 
 	return newText
 }
@@ -55,7 +55,7 @@ function addTextLink(context, x, y, text, style) {
 	)
 	newText.inputEnabled = true
 	newText.input.useHandCursor = true
-	newText.anchor.set(0.5)
+	newText.anchor.set(0.5, 0)
 
 	return newText
 }

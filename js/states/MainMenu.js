@@ -16,23 +16,14 @@ Game.MainMenu.prototype = {
 		let bgImage = this.game.add.sprite(0, 0, 'grassBg')
 		bgImage.scale.setTo(bgScale)
 		// MENU BOXES - White border box	and blue inner box
-		drawRoundedBox(
-			this, 0, 0, gameW, 50, 4, 'ffffff'
-		)
-		drawRoundedBox(
-			this, 2, 2, gameW-4, 46, 4, '0000ff'
-		)
-		drawRoundedBox(
-			this, 0, 50, gameW, gameH-50, 4, 'ffffff'
-		)
-		drawRoundedBox(
-			this, 2, 52, gameW-4, gameH-54, 4, '0000ff'
-		)
+		drawRoundedBox(this, 0, 0, gameW, 50, 4, 'ffffff')
+		drawRoundedBox(this, 2, 2, gameW-4, 46, 4, '0000ff')
+		drawRoundedBox(this, 0, 50, gameW, gameH-50, 4, 'ffffff')
+		drawRoundedBox(this, 2, 52, gameW-4, gameH-54, 4, '0000ff')
 		// HEADER TEXT
 		const headerText = addCenteredText(
-			this, gameCenterX, 12, "Main Menu", txtStyle.header
+			this, gameCenterX, 10, "Main Menu", txtStyle.header
 		)
-		headerText.anchor.set(0.5, 0)
 		// MENU ITEMS TEXT
 		// New Game
 		const newGameText = addTextLink(
@@ -40,12 +31,11 @@ Game.MainMenu.prototype = {
 		)
 		newGameText.events.onInputUp.add(startNewGame, this)
 		// Quit
-		const quitText = addTextLink(this, gameW/2, gameH-20, "Quit", txtStyle.header2)
+		const quitText = addTextLink(this, gameW/2, gameH-30, "Quit", txtStyle.header2)
 
 		function startNewGame () {
 			this.state.start('HeroPicker')
 		}
-		
 	},
 	update: function () {
 		
