@@ -9,9 +9,9 @@ const playerSpriteH = 24
 const spriteScale = 2
 
 const txtStyle = {
-	header: {font: "32px Arial", fill: "#ffffff", align: "center"},
-	header2: {font: "20px Arial", fill: "#ffffff", align: "center"},
-	paragraph: {font: "16px Arial", fill: "#ffffff", align: "center"}
+	h1: {font: "32px Arial", fill: "#ffffff", align: "center"},
+	h2: {font: "20px Arial", fill: "#ffffff", align: "center"},
+	p: {font: "16px Arial", fill: "#ffffff", align: "center"}
 }
 
 function drawRoundedBox (context, x, y, width, height, radius, color) {

@@ -22,16 +22,16 @@ Game.MainMenu.prototype = {
 		drawRoundedBox(this, 2, 52, gameW-4, gameH-54, 4, '0000ff')
 		// HEADER TEXT
 		const headerText = addCenteredText(
-			this, gameCenterX, 10, "Main Menu", txtStyle.header
+			this, gameCenterX, 10, "Main Menu", txtStyle.h1
 		)
 		// MENU ITEMS TEXT
 		// New Game
 		const newGameText = addTextLink(
-			this, gameW/2, 80, "New Game", txtStyle.header2 
+			this, gameW/2, 80, "New Game", txtStyle.h2 
 		)
 		newGameText.events.onInputUp.add(startNewGame, this)
 		// Quit
-		const quitText = addTextLink(this, gameW/2, gameH-30, "Quit", txtStyle.header2)
+		const quitText = addTextLink(this, gameW/2, gameH-30, "Quit", txtStyle.h2)
 
 		function startNewGame () {
 			this.state.start('HeroPicker')

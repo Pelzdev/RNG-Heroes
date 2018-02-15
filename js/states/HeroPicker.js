@@ -17,22 +17,25 @@ Game.HeroPicker.prototype = {
 		drawRoundedBox(this, 2, 52, gameW-4, gameH-54, 4, '0000ff')
 		// HEADER TEXT
 		const headerText = addCenteredText(
-			this, gameW-10, 10, "Choose a hero", txtStyle.header
+			this, gameW-10, 10, "Choose a hero", txtStyle.h1
 		)
 		headerText.anchor.set(1, 0)
-		// PLAYER SPRITE
+		// Create hero choices
+		const hero1 = randHero()
+		const hero2 = randHero()
+		const hero3 = randHero()
 		// Place the player sprite
-		drawSprite(this, 10, 60, 'jobsSheet', 0)
-		addText(this, 64, 60, 'HERONAME1', txtStyle.paragraph)
-		addText(this, 64, 80, 'level 1 Archer', txtStyle.paragraph)
-		drawSprite(this, 10, 150, 'jobsSheet', 2)
-		addText(this, 64, 150, 'HERONAME2', txtStyle.paragraph)
-		addText(this, 64, 170, 'level 1 Druid', txtStyle.paragraph)
-		drawSprite(this, 10, 240, 'jobsSheet', 4)
-		addText(this, 64, 240, 'HERONAME3', txtStyle.paragraph)
-		addText(this, 64, 260, 'level 1 Knight', txtStyle.paragraph)
+		drawSprite(this, 10, 60, 'jobsSheet', hero1.sprite)
+		addText(this, 64, 60, hero1.name, txtStyle.p)
+		addText(this, 64, 80, `level ${hero1.level} ${hero1.job}`, txtStyle.p)
+		drawSprite(this, 10, 150, 'jobsSheet', hero2.sprite)
+		addText(this, 64, 150, hero2.name, txtStyle.p)
+		addText(this, 64, 170, `level ${hero2.level} ${hero2.job}`, txtStyle.p)
+		drawSprite(this, 10, 240, 'jobsSheet', hero3.sprite)
+		addText(this, 64, 240, hero3.name, txtStyle.p)
+		addText(this, 64, 260, `level ${hero3.level} ${hero3.job}`, txtStyle.p)
 		// MENU ITEMS TEXT
-		const backText = addTextLink(this, 10, 18, "Back", txtStyle.header2)
+		const backText = addTextLink(this, 10, 18, "Back", txtStyle.h2)
 		backText.events.onInputUp.add(goToMainMenu, this)
 		backText.anchor.set(0, 0)
 		// FUNCTIONS
