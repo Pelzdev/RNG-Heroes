@@ -5,8 +5,8 @@ Game.Preloader = function (game) {
 Game.Preloader.prototype = {
 	preload: function () {
 		this.game.load.atlas(
-			'jobsSheet', 'assets/images/spritesheets/oryx_jobs_spritesheet.png', 
-			'assets/images/spritesheets/oryx_jobs_spritesheet.json',
+			'spritesheet', 'assets/images/spritesheets/spritesheet.png', 
+			'assets/images/spritesheets/spritesheet.json',
 			Phaser.Loader.TEXTURE_ATLAS_JSON_HASH
 		)
 		this.game.load.image('grassBg', 'assets/images/grass2_bg.png')
