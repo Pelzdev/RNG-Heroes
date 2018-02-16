@@ -1,6 +1,6 @@
 {"frames": {
 
-"archer_male_1.png":
+"enemy_blob_1.png":
 {
 	"frame": {"x":0,"y":0,"w":24,"h":24},
 	"rotated": false,
@@ -9,7 +9,7 @@
 	"sourceSize": {"w":24,"h":24},
 	"pivot": {"x":0.5,"y":0.5}
 },
-"archer_male_2.png":
+"enemy_blob_2.png":
 {
 	"frame": {"x":24,"y":0,"w":24,"h":24},
 	"rotated": false,
@@ -18,7 +18,7 @@
 	"sourceSize": {"w":24,"h":24},
 	"pivot": {"x":0.5,"y":0.5}
 },
-"druid_male_1.png":
+"enemy_fly_1.png":
 {
 	"frame": {"x":48,"y":0,"w":24,"h":24},
 	"rotated": false,
@@ -27,7 +27,7 @@
 	"sourceSize": {"w":24,"h":24},
 	"pivot": {"x":0.5,"y":0.5}
 },
-"druid_male_2.png":
+"enemy_fly_2.png":
 {
 	"frame": {"x":72,"y":0,"w":24,"h":24},
 	"rotated": false,
@@ -36,7 +36,7 @@
 	"sourceSize": {"w":24,"h":24},
 	"pivot": {"x":0.5,"y":0.5}
 },
-"knight_male_1.png":
+"enemy_rat_1.png":
 {
 	"frame": {"x":96,"y":0,"w":24,"h":24},
 	"rotated": false,
@@ -45,7 +45,7 @@
 	"sourceSize": {"w":24,"h":24},
 	"pivot": {"x":0.5,"y":0.5}
 },
-"knight_male_2.png":
+"enemy_rat_2.png":
 {
 	"frame": {"x":120,"y":0,"w":24,"h":24},
 	"rotated": false,
@@ -54,7 +54,7 @@
 	"sourceSize": {"w":24,"h":24},
 	"pivot": {"x":0.5,"y":0.5}
 },
-"mage_male_1.png":
+"enemy_skeleton_1.png":
 {
 	"frame": {"x":144,"y":0,"w":24,"h":24},
 	"rotated": false,
@@ -63,7 +63,7 @@
 	"sourceSize": {"w":24,"h":24},
 	"pivot": {"x":0.5,"y":0.5}
 },
-"mage_male_2.png":
+"enemy_skeleton_2.png":
 {
 	"frame": {"x":168,"y":0,"w":24,"h":24},
 	"rotated": false,
@@ -72,7 +72,7 @@
 	"sourceSize": {"w":24,"h":24},
 	"pivot": {"x":0.5,"y":0.5}
 },
-"priest_male_1.png":
+"enemy_wolf_1.png":
 {
 	"frame": {"x":192,"y":0,"w":24,"h":24},
 	"rotated": false,
@@ -81,7 +81,7 @@
 	"sourceSize": {"w":24,"h":24},
 	"pivot": {"x":0.5,"y":0.5}
 },
-"priest_male_2.png":
+"enemy_wolf_2.png":
 {
 	"frame": {"x":216,"y":0,"w":24,"h":24},
 	"rotated": false,
@@ -90,7 +90,7 @@
 	"sourceSize": {"w":24,"h":24},
 	"pivot": {"x":0.5,"y":0.5}
 },
-"raider_male_1.png":
+"job_archer_male_1.png":
 {
 	"frame": {"x":240,"y":0,"w":24,"h":24},
 	"rotated": false,
@@ -99,7 +99,7 @@
 	"sourceSize": {"w":24,"h":24},
 	"pivot": {"x":0.5,"y":0.5}
 },
-"raider_male_2.png":
+"job_archer_male_2.png":
 {
 	"frame": {"x":264,"y":0,"w":24,"h":24},
 	"rotated": false,
@@ -108,7 +108,7 @@
 	"sourceSize": {"w":24,"h":24},
 	"pivot": {"x":0.5,"y":0.5}
 },
-"templar_male_1.png":
+"job_druid_male_1.png":
 {
 	"frame": {"x":288,"y":0,"w":24,"h":24},
 	"rotated": false,
@@ -117,7 +117,7 @@
 	"sourceSize": {"w":24,"h":24},
 	"pivot": {"x":0.5,"y":0.5}
 },
-"templar_male_2.png":
+"job_druid_male_2.png":
 {
 	"frame": {"x":312,"y":0,"w":24,"h":24},
 	"rotated": false,
@@ -126,7 +126,7 @@
 	"sourceSize": {"w":24,"h":24},
 	"pivot": {"x":0.5,"y":0.5}
 },
-"thief_male_1.png":
+"job_knight_male_1.png":
 {
 	"frame": {"x":336,"y":0,"w":24,"h":24},
 	"rotated": false,
@@ -135,7 +135,7 @@
 	"sourceSize": {"w":24,"h":24},
 	"pivot": {"x":0.5,"y":0.5}
 },
-"thief_male_2.png":
+"job_knight_male_2.png":
 {
 	"frame": {"x":360,"y":0,"w":24,"h":24},
 	"rotated": false,
@@ -144,7 +144,7 @@
 	"sourceSize": {"w":24,"h":24},
 	"pivot": {"x":0.5,"y":0.5}
 },
-"warrior_male_1.png":
+"job_mage_male_1.png":
 {
 	"frame": {"x":384,"y":0,"w":24,"h":24},
 	"rotated": false,
@@ -153,9 +153,99 @@
 	"sourceSize": {"w":24,"h":24},
 	"pivot": {"x":0.5,"y":0.5}
 },
-"warrior_male_2.png":
+"job_mage_male_2.png":
 {
 	"frame": {"x":408,"y":0,"w":24,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":24,"h":24},
+	"sourceSize": {"w":24,"h":24},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"job_priest_male_1.png":
+{
+	"frame": {"x":432,"y":0,"w":24,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":24,"h":24},
+	"sourceSize": {"w":24,"h":24},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"job_priest_male_2.png":
+{
+	"frame": {"x":456,"y":0,"w":24,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":24,"h":24},
+	"sourceSize": {"w":24,"h":24},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"job_raider_male_1.png":
+{
+	"frame": {"x":480,"y":0,"w":24,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":24,"h":24},
+	"sourceSize": {"w":24,"h":24},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"job_raider_male_2.png":
+{
+	"frame": {"x":504,"y":0,"w":24,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":24,"h":24},
+	"sourceSize": {"w":24,"h":24},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"job_templar_male_1.png":
+{
+	"frame": {"x":528,"y":0,"w":24,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":24,"h":24},
+	"sourceSize": {"w":24,"h":24},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"job_templar_male_2.png":
+{
+	"frame": {"x":552,"y":0,"w":24,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":24,"h":24},
+	"sourceSize": {"w":24,"h":24},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"job_thief_male_1.png":
+{
+	"frame": {"x":576,"y":0,"w":24,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":24,"h":24},
+	"sourceSize": {"w":24,"h":24},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"job_thief_male_2.png":
+{
+	"frame": {"x":600,"y":0,"w":24,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":24,"h":24},
+	"sourceSize": {"w":24,"h":24},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"job_warrior_male_1.png":
+{
+	"frame": {"x":624,"y":0,"w":24,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":24,"h":24},
+	"sourceSize": {"w":24,"h":24},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"job_warrior_male_2.png":
+{
+	"frame": {"x":648,"y":0,"w":24,"h":24},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":24,"h":24},
@@ -165,10 +255,10 @@
 "meta": {
 	"app": "http://www.codeandweb.com/texturepacker",
 	"version": "1.0",
-	"image": "oryx_jobs_spritesheet.png",
+	"image": "spritesheet.png",
 	"format": "RGBA8888",
-	"size": {"w":432,"h":24},
+	"size": {"w":672,"h":24},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:1863da24217ca153ae2f9723b61f1bfe:9d3a38f231523c1d41019bba20fd1258:23fe91a7c0fe7c9ae3cf626e89c9110a$"
+	"smartupdate": "$TexturePacker:SmartUpdate:66eff94ed6508a14d91bee3ddb60ced4:b5b25a7ae1760c2c5bac5e9c7892119b:729adc6043343cfda41c447ce8f464d6$"
 }
 }

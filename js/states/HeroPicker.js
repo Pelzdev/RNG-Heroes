@@ -25,19 +25,19 @@ Game.HeroPicker.prototype = {
 		const hero2 = randHero()
 		const hero3 = randHero()
 		// Place the player sprite
-		drawSprite(this, 10, 60, 'jobsSheet', hero1.sprite)
+		drawSprite(this, 10, 60, 'spritesheet', hero1.sprite)
 		addText(this, 64, 60, hero1.name, txtStyle.p)
 		addText(this, 64, 80, `level ${hero1.level} ${hero1.job}`, txtStyle.p)
 		const pickHero1 = addTextLink(this, 300, 70, "Choose 1", txtStyle.h2)
 		pickHero1.events.onInputUp.add(goToHeroMenu, this)
 		pickHero1.anchor.set(0, 0)
-		drawSprite(this, 10, 150, 'jobsSheet', hero2.sprite)
+		drawSprite(this, 10, 150, 'spritesheet', hero2.sprite)
 		addText(this, 64, 150, hero2.name, txtStyle.p)
 		addText(this, 64, 170, `level ${hero2.level} ${hero2.job}`, txtStyle.p)
 		const pickHero2 = addTextLink(this, 300, 160, "Choose 2", txtStyle.h2)
 		pickHero2.events.onInputUp.add(goToHeroMenu, this)
 		pickHero2.anchor.set(0, 0)
-		drawSprite(this, 10, 240, 'jobsSheet', hero3.sprite)
+		drawSprite(this, 10, 240, 'spritesheet', hero3.sprite)
 		addText(this, 64, 240, hero3.name, txtStyle.p)
 		addText(this, 64, 260, `level ${hero3.level} ${hero3.job}`, txtStyle.p)
 		const pickHero3 = addTextLink(this, 300, 250, "Choose 3", txtStyle.h2)
@@ -53,12 +53,13 @@ Game.HeroPicker.prototype = {
 		}
 		// Find another way to pass arguments...
 		function goToHeroMenu () {
-			if (arguments[0].text === 'Choose 1') {
-				player = hero1
-			} else if (arguments[0].text === 'Choose 2') {
-				player = hero2
-			} else {
-				player = hero3
+			switch (arguments[0].text) {
+				case 'Choose 1':
+					player = hero1
+				case 'Choose 2':
+					player = hero2
+				case 'Choose 3':
+					player = hero3
 			}
 			this.state.start('HeroMenu')
 		}
@@ -67,4 +68,3 @@ Game.HeroPicker.prototype = {
 
 	},
 }
-		

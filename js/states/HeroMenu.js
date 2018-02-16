@@ -21,7 +21,7 @@ Game.HeroMenu.prototype = {
 		)
 		headerText.anchor.set(1, 0)
 		// Place the player sprite
-		drawSprite(this, 10, 60, 'jobsSheet', player.sprite)
+		drawSprite(this, 10, 60, 'spritesheet', player.sprite)
 		addText(this, 64, 60, player.name, txtStyle.p)
 		addText(this, 64, 80, `level ${player.level} ${player.job}`, txtStyle.p)
 		// Show stats
@@ -31,16 +31,25 @@ Game.HeroMenu.prototype = {
 		addText(this, 15, 180, `wis: ${player.wis}`, txtStyle.p)
 		addText(this, 15, 200	, `spe: ${player.spe}`, txtStyle.p)
 		// Show skills
-		addText(this, 180, 60	, `Skills:`, txtStyle.p)
-		addText(this, 240, 60	, `Skill1`, txtStyle.p)
-		addText(this, 240, 80	, `Skill2`, txtStyle.p)
+		addText(this, 120, 120, `Skills:`, txtStyle.p)
+		addText(this, 120, 140, `Skill1`, txtStyle.p)
+		addText(this, 120, 160, `Skill2`, txtStyle.p)
+		// Show consumables
+		addText(this, 120, 200, `Consumables:`, txtStyle.p)
+		addText(this, 120, 220, `Potion I`, txtStyle.p)
+		addText(this, 120, 240, `Red Mushroom`, txtStyle.p)
 		// MENU ITEMS TEXT
 		const backText = addTextLink(this, 10, 18, "Back", txtStyle.h2)
 		backText.events.onInputUp.add(goToMainMenu, this)
 		backText.anchor.set(0, 0)
+		const eventText = addTextLink(this, 320, 80, "Adventure", txtStyle.h2)
+		eventText.events.onInputUp.add(goToEvent, this)
 		// FUNCTIONS
 		function goToMainMenu () {
 			this.state.start('MainMenu')
+		}
+		function goToEvent () {
+			this.state.start('Fight')
 		}
 	},
 	update: function () {

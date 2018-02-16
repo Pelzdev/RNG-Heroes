@@ -61,6 +61,3 @@ function addTextLink(context, x, y, text, style) {
 
 	return newText
 }
-
-
-
