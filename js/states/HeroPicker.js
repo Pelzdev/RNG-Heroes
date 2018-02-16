@@ -53,12 +53,13 @@ Game.HeroPicker.prototype = {
 		}
 		// Find another way to pass arguments...
 		function goToHeroMenu () {
-			if (arguments[0].text === 'Choose 1') {
-				player = hero1
-			} else if (arguments[0].text === 'Choose 2') {
-				player = hero2
-			} else {
-				player = hero3
+			switch (arguments[0].text) {
+				case 'Choose 1':
+					player = hero1
+				case 'Choose 2':
+					player = hero2
+				case 'Choose 3':
+					player = hero3
 			}
 			this.state.start('HeroMenu')
 		}
@@ -67,4 +68,3 @@ Game.HeroPicker.prototype = {
 
 	},
 }
-		

@@ -31,16 +31,26 @@ Game.HeroMenu.prototype = {
 		addText(this, 15, 180, `wis: ${player.wis}`, txtStyle.p)
 		addText(this, 15, 200	, `spe: ${player.spe}`, txtStyle.p)
 		// Show skills
-		addText(this, 180, 60	, `Skills:`, txtStyle.p)
-		addText(this, 240, 60	, `Skill1`, txtStyle.p)
-		addText(this, 240, 80	, `Skill2`, txtStyle.p)
+		addText(this, 200, 60	, `Skills:`, txtStyle.p)
+		addText(this, 200, 80	, `Skill1`, txtStyle.p)
+		addText(this, 200, 100	, `Skill2`, txtStyle.p)
+		// Show skills
+		addText(this, 200, 140	, `Consumables:`, txtStyle.p)
+		addText(this, 200, 160	, `Potion I`, txtStyle.p)
+		addText(this, 200, 180	, `Red Mushroom`, txtStyle.p)
 		// MENU ITEMS TEXT
 		const backText = addTextLink(this, 10, 18, "Back", txtStyle.h2)
 		backText.events.onInputUp.add(goToMainMenu, this)
 		backText.anchor.set(0, 0)
+		const eventText = addTextLink(this, 300, 200, "Adventure", txtStyle.h2)
+		backText.events.onInputUp.add(goToEvent, this)
+		backText.anchor.set(0, 0)
 		// FUNCTIONS
 		function goToMainMenu () {
 			this.state.start('MainMenu')
+		}
+		function goToEvent () {
+			this.state.start('Fight')
 		}
 	},
 	update: function () {
