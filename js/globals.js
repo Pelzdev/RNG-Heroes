@@ -8,6 +8,8 @@ const playerSpriteW = 24
 const playerSpriteH = 24
 const spriteScale = 2
 
+let player = {}
+
 const txtStyle = {
 	h1: {font: "32px Arial", fill: "#ffffff", align: "center"},
 	h2: {font: "20px Arial", fill: "#ffffff", align: "center"},

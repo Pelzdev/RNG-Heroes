@@ -22,6 +22,7 @@ class Hero {
 		this.name = name
 		this.level = level
 		this.hpMax = startStats.hpMax
+		this.hpLeft = startStats.hpMax
 		this.atk = startStats.atk
 		this.def = startStats.def
 		this.wis = startStats.wis

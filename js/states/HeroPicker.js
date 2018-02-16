@@ -28,19 +28,39 @@ Game.HeroPicker.prototype = {
 		drawSprite(this, 10, 60, 'jobsSheet', hero1.sprite)
 		addText(this, 64, 60, hero1.name, txtStyle.p)
 		addText(this, 64, 80, `level ${hero1.level} ${hero1.job}`, txtStyle.p)
+		const pickHero1 = addTextLink(this, 300, 70, "Choose 1", txtStyle.h2)
+		pickHero1.events.onInputUp.add(goToHeroMenu, this)
+		pickHero1.anchor.set(0, 0)
 		drawSprite(this, 10, 150, 'jobsSheet', hero2.sprite)
 		addText(this, 64, 150, hero2.name, txtStyle.p)
 		addText(this, 64, 170, `level ${hero2.level} ${hero2.job}`, txtStyle.p)
+		const pickHero2 = addTextLink(this, 300, 160, "Choose 2", txtStyle.h2)
+		pickHero2.events.onInputUp.add(goToHeroMenu, this)
+		pickHero2.anchor.set(0, 0)
 		drawSprite(this, 10, 240, 'jobsSheet', hero3.sprite)
 		addText(this, 64, 240, hero3.name, txtStyle.p)
 		addText(this, 64, 260, `level ${hero3.level} ${hero3.job}`, txtStyle.p)
+		const pickHero3 = addTextLink(this, 300, 250, "Choose 3", txtStyle.h2)
+		pickHero3.events.onInputUp.add(goToHeroMenu, this)
+		pickHero3.anchor.set(0, 0)
 		// MENU ITEMS TEXT
 		const backText = addTextLink(this, 10, 18, "Back", txtStyle.h2)
 		backText.events.onInputUp.add(goToMainMenu, this)
 		backText.anchor.set(0, 0)
 		// FUNCTIONS
 		function goToMainMenu () {
-			this.state.start('MainMenu')
+			this.state.start('MainMenu')	
+		}
+		// Find another way to pass arguments...
+		function goToHeroMenu () {
+			if (arguments[0].text === 'Choose 1') {
+				player = hero1
+			} else if (arguments[0].text === 'Choose 2') {
+				player = hero2
+			} else {
+				player = hero3
+			}
+			this.state.start('HeroMenu')
 		}
 	},
 	update: function () {
