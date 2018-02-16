@@ -4,8 +4,6 @@ const winH = window.innerHeight
 const bgH = 96
 const bgW = 288
 
-const playerSpriteW = 24
-const playerSpriteH = 24
 const spriteScale = 2
 
 let player = {}
