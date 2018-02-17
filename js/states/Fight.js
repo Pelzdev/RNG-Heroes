@@ -44,6 +44,7 @@ Game.Fight.prototype = {
 		function goToEvent () {
 			this.state.start('Fight')
 		}
+		console.log(attack(player, enemy, normalAttack, 1, 'physical'))
 	},
 	update: function () {
 
