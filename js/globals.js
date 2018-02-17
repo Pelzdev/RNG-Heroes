@@ -58,6 +58,6 @@ function addTextLink(context, x, y, text, style) {
 	return newText
 }
 
-function randNum (num1, num2) {
-	return Math.floor((Math.random()*num2)+num1)
+function randNum (min, max) {
+	return Math.floor(Math.random() * (max - min) + min)
 }

@@ -12,24 +12,25 @@ const jobs = {
 	warrior: 	{name: 'warrior', imgPos: 26}
 }
 const enemies = {
-	blob: 		{name: 'blob', 		imgPos: 0, hp: 10, atk: 5, def: 5, wis: 5, spe: 5},
-	fly: 			{name: 'fly', 		imgPos: 2, hp: 10, atk: 5, def: 5, wis: 5, spe: 5},
-	rat: 			{name: 'rat', 		imgPos: 4, hp: 10, atk: 5, def: 5, wis: 5, spe: 5},
-	skeleton: {name: 'skeleton',imgPos: 6, hp: 10, atk: 5, def: 5, wis: 5, spe: 5},
-	wolf: 		{name: 'wolf', 		imgPos: 8, hp: 10, atk: 5, def: 5, wis: 5, spe: 5}
+	blob: 		{name: 'blob', 		imgPos: 0, hp: 15, atk: 5, def: 5, wis: 5, spe: 5},
+	fly: 			{name: 'fly', 		imgPos: 2, hp: 15, atk: 5, def: 5, wis: 5, spe: 5},
+	rat: 			{name: 'rat', 		imgPos: 4, hp: 15, atk: 5, def: 5, wis: 5, spe: 5},
+	skeleton: {name: 'skeleton',imgPos: 6, hp: 15, atk: 5, def: 5, wis: 5, spe: 5},
+	wolf: 		{name: 'wolf', 		imgPos: 8, hp: 15, atk: 5, def: 5, wis: 5, spe: 5}
 }
 
 const startStats = {
-	hp: 		50,
-	atk: 		20,
-	def: 		20,
-	wis: 		20,
-	spe: 		20
+	hp: 		40,
+	atk: 		10,
+	def: 		10,
+	wis: 		10,
+	spe: 		10
 }
 
 class Hero {
 	constructor(name, level, job) {
-		this.job = job.name
+		this.job = job
+		this.job.name = job.name
 		this.sprite = job.imgPos
 		this.name = name
 		this.level = level
