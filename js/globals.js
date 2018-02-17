@@ -1,13 +1,9 @@
 const winW = window.innerWidth
 const winH = window.innerHeight
-
 const bgH = 96
 const bgW = 288
 
-const playerSpriteW = 24
-const playerSpriteH = 24
 const spriteScale = 2
-
 let player = {}
 
 const txtStyle = {
@@ -60,4 +56,8 @@ function addTextLink(context, x, y, text, style) {
 	newText.anchor.set(0.5, 0)
 
 	return newText
+}
+
+function randNum (min, max) {
+	return Math.floor(Math.random() * (max - min) + min)
 }

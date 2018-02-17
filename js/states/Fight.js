@@ -23,14 +23,14 @@ Game.Fight.prototype = {
 		// Place the player sprite
 		let heroSprite = drawSprite(this, 80, 150, 'spritesheet', player.sprite)
 		heroSprite.anchor.set(0.5, 0.5)
-		let heroText = addText(this, 40, 250, 
+		let heroText = addText(this, 40, 70, 
 			`${player.name}: ${player.hpLeft}/${player.hpMax}`, txtStyle.p
 		)
 		// Place the enemy sprite
 		let enemy = randEnemy()
 		let enemySprite = drawSprite(this, 320, 150, 'spritesheet', enemy.sprite)
 		enemySprite.anchor.set(0.5, 0.5)
-		let enemyText = addText(this, 280, 250, 
+		let enemyText = addText(this, 280, 70, 
 			`${enemy.name}: ${enemy.hpLeft}/${enemy.hpMax}`, txtStyle.p
 		)
 		// MENU ITEMS TEXT
@@ -44,6 +44,10 @@ Game.Fight.prototype = {
 		function goToEvent () {
 			this.state.start('Fight')
 		}
+		console.log('player->enemy' + attack(player, enemy, normalAttack, 1, 'physical'))
+		console.log('enemy->player' + attack(enemy, player, normalAttack, 1, 'physical'))
+		console.log('player->enemy' + attack(player, enemy, 80, 1, 'physical'))
+		console.log('enemy->player' + attack(enemy, player, 80, 1, 'physical'))
 	},
 	update: function () {
 

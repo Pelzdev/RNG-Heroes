@@ -23,7 +23,7 @@ Game.HeroMenu.prototype = {
 		// Place the player sprite
 		drawSprite(this, 10, 60, 'spritesheet', player.sprite)
 		addText(this, 64, 60, player.name, txtStyle.p)
-		addText(this, 64, 80, `level ${player.level} ${player.job}`, txtStyle.p)
+		addText(this, 64, 80, `level ${player.level} ${player.job.name}`, txtStyle.p)
 		// Show stats
 		addText(this, 15, 120, `hp: ${player.hpLeft}/${player.hpMax}`, txtStyle.p)
 		addText(this, 15, 140, `atk: ${player.atk}`, txtStyle.p)

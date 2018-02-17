@@ -1,36 +1,37 @@
 const names = ['Harald', 'Carl', 'Browald', 'Bob']
 
 const jobs = {
-	archer: 	{name: 'archer', 	spritePos: 10},
-	druid: 		{name: 'druid', 	spritePos: 12},
-	knight: 	{name: 'knight', 	spritePos: 14},
-	mage: 		{name: 'mage', 		spritePos: 16},
-	healer: 	{name: 'healer', 	spritePos: 18},
-	raider: 	{name: 'raider', 	spritePos: 20},
-	templar: 	{name: 'templar', spritePos: 22},
-	thief: 		{name: 'thief', 	spritePos: 24},
-	warrior: 	{name: 'warrior', spritePos: 26}
+	archer: 	{name: 'archer', 	imgPos: 10},
+	druid: 		{name: 'druid', 	imgPos: 12},
+	knight: 	{name: 'knight', 	imgPos: 14},
+	mage: 		{name: 'mage', 		imgPos: 16},
+	healer: 	{name: 'healer', 	imgPos: 18},
+	raider: 	{name: 'raider', 	imgPos: 20},
+	templar: 	{name: 'templar', imgPos: 22},
+	thief: 		{name: 'thief', 	imgPos: 24},
+	warrior: 	{name: 'warrior', imgPos: 26}
 }
 const enemies = {
-	blob: 		{name: 'blob', 		spritePos: 0, hp: 10, atk: 5, def: 5, wis: 5, spe: 5},
-	fly: 			{name: 'fly', 		spritePos: 2, hp: 10, atk: 5, def: 5, wis: 5, spe: 5},
-	rat: 			{name: 'rat', 		spritePos: 4, hp: 10, atk: 5, def: 5, wis: 5, spe: 5},
-	skeleton: {name: 'skeleton',spritePos: 6, hp: 10, atk: 5, def: 5, wis: 5, spe: 5},
-	wolf: 		{name: 'wolf', 		spritePos: 8, hp: 10, atk: 5, def: 5, wis: 5, spe: 5}
+	blob: 		{name: 'blob', 		imgPos: 0, hp: 15, atk: 5, def: 5, wis: 5, spe: 5},
+	fly: 			{name: 'fly', 		imgPos: 2, hp: 15, atk: 5, def: 5, wis: 5, spe: 5},
+	rat: 			{name: 'rat', 		imgPos: 4, hp: 15, atk: 5, def: 5, wis: 5, spe: 5},
+	skeleton: {name: 'skeleton',imgPos: 6, hp: 15, atk: 5, def: 5, wis: 5, spe: 5},
+	wolf: 		{name: 'wolf', 		imgPos: 8, hp: 15, atk: 5, def: 5, wis: 5, spe: 5}
 }
 
 const startStats = {
-	hp: 	50,
-	atk: 		20,
-	def: 		20,
-	wis: 		20,
-	spe: 		20
+	hp: 		40,
+	atk: 		10,
+	def: 		10,
+	wis: 		10,
+	spe: 		10
 }
 
 class Hero {
 	constructor(name, level, job) {
-		this.job = job.name
-		this.sprite = job.spritePos
+		this.job = job
+		this.job.name = job.name
+		this.sprite = job.imgPos
 		this.name = name
 		this.level = level
 		this.hpMax = startStats.hp
@@ -44,7 +45,7 @@ class Hero {
 
 class Enemy {
 	constructor(type, level) {
-		this.sprite = type.spritePos
+		this.sprite = type.imgPos
 		this.name = type.name
 		this.level = level
 		this.hpMax = type.hp
